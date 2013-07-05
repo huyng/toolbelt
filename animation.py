@@ -37,7 +37,14 @@ def leave_axes(event):
 
 fig.canvas.mpl_connect('axes_enter_event', enter_axes)
 fig.canvas.mpl_connect('axes_leave_event', leave_axes)
-ani = animation.FuncAnimation(fig, updatefig, interval=50, blit=False)
+ani = animation.FuncAnimation(fig, 
+                              updatefig,       # function to update figure
+                              interval=50,     # milliseconds between frames
+                              frames=20,       # controls how many frames to run
+                              blit=False)
 plt.show()
+
+# uncomment to save this animation as a movie
+# ani.save("movie.mp4", writer=animation.FFMpegFileWriter(), extra_args=['-vcodec', 'libx264'])
 
 raw_input('press ENTER to exit')
