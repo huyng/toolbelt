@@ -69,4 +69,6 @@ for tick in ax.xaxis.iter_ticks():
     tick[0].label1On = False
     tick[0].label2.set_rotation(45)
 
+plt.ylabel('actual')
+plt.xlabel('predicted')
 raw_input('press ENTER to exit')
