@@ -9,7 +9,7 @@ data_y = [1,3,2,1,5]
 # data_x, data_y = zip(*data_xy)
 
 # create figure
-plt.plot(data_x, data_y, 'o')
+plt.plot(data_x, data_y, '-o')
 plt.show()
 raw_input('press ENTER to exit')
 
